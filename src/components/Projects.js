@@ -68,55 +68,56 @@ const Projects = () => {
         </div>
 
         <div className="projects-grid">
-          {projects.map((project, index) => (
-            <div 
-              key={index} 
-              className="project-card"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="project-header">
-                <div className="project-category">{project.category}</div>
-                <h3 className="project-title">{project.title}</h3>
-                <p className="project-description">{project.description}</p>
-              </div>
-
-              <div className="project-body">
-                <div className="project-highlights">
-                  <h4 className="highlights-title">Key Highlights</h4>
-                  <ul className="highlights-list">
-                    {project.highlights.map((highlight, hIndex) => (
-                      <li key={hIndex} className="highlight-point">
-                        {highlight}
-                      </li>
-                    ))}
-                  </ul>
+          {projects.map((project, index) => {
+            return (
+              <div 
+                key={index} 
+                className="project-card"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="project-header">
+                  <div className="project-category">{project.category}</div>
+                  <h3 className="project-title">{project.title}</h3>
+                  <p className="project-description">{project.description}</p>
                 </div>
 
-                <div className="project-technologies">
-                  <h4 className="tech-title">Technologies</h4>
-                  <div className="tech-tags">
-                    {project.technologies.map((tech, tIndex) => (
-                      <span key={tIndex} className="tech-tag">
-                        {tech}
-                      </span>
-                    ))}
+                <div className="project-body">
+                  <div className="project-highlights">
+                    <h4 className="highlights-title">Key Highlights</h4>
+                    <ul className="highlights-list">
+                      {project.highlights.map((highlight, hIndex) => (
+                        <li key={hIndex} className="highlight-point">
+                          {highlight}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                </div>
 
-                {project.link && (
-                  <a 
-                    href={project.link} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="project-link"
-                  >
-                    View Project →
-                  </a>
-                )}
+                  <div className="project-technologies">
+                    <h4 className="tech-title">Technologies</h4>
+                    <div className="tech-tags">
+                      {project.technologies.map((tech, tIndex) => (
+                        <span key={tIndex} className="tech-tag">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {project.link && (
+                    <a 
+                      href={project.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="project-link"
+                    >
+                      View Project →
+                    </a>
+                  )}
+                </div>
               </div>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
