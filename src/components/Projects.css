@@ -198,6 +198,35 @@ body.dark-mode .highlight-point {
   transform: translateY(-2px);
 }
 
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, var(--primary-color) 0%, #fbbf24 100%);
+  color: #111827;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid transparent;
+  margin-top: auto;
+  align-self: flex-start;
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+}
+
+.project-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.5);
+  background: linear-gradient(135deg, #fbbf24 0%, var(--primary-color) 100%);
+}
+
+body.dark-mode .project-link {
+  color: #1f2937;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .projects {

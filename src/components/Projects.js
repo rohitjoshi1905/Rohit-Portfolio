@@ -12,7 +12,8 @@ const Projects = () => {
         'Integrated HuggingFace LLMs for accurate response generation',
         'Implemented semantic document retrieval using RAG architecture'
       ],
-      category: 'AI/ML'
+      category: 'AI/ML',
+      link: 'https://youtu.be/SUeGODW2t8U'
     },
     {
       title: 'Breast Cancer Detection Using NGS Data',
@@ -24,7 +25,8 @@ const Projects = () => {
         'Evaluated model performance using accuracy, precision, recall, and confusion matrix',
         'Presented research paper at ICRTMD 2025'
       ],
-      category: 'Research'
+      category: 'Research',
+      link: 'https://youtu.be/Gg8h3MXBfWE'
     },
     {
       title: 'AI Task Planner with FastAPI & Firebase',
@@ -36,7 +38,8 @@ const Projects = () => {
         'Designed responsive frontend with seamless API integration',
         'Deployed on Vercel (frontend) and Render (backend)'
       ],
-      category: 'Full Stack'
+      category: 'Full Stack',
+      link: 'https://task-frontend-seven-sandy.vercel.app/'
     },
     {
       title: 'Triloka.world - AI Travel Platform',
@@ -48,7 +51,8 @@ const Projects = () => {
         'Integrated LLMs via Portkey for intelligent responses',
         'Deployed on AWS EC2 with Vercel frontend'
       ],
-      category: 'Full Stack'
+      category: 'Full Stack',
+      link: 'https://triloka.world'
     }
   ];
 
@@ -98,6 +102,18 @@ const Projects = () => {
                     ))}
                   </div>
                 </div>
+
+                {project.link && (
+                  <a 
+                    href={project.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="project-link"
+                  >
+                    View Project →
+                  </a>
+                )}
+              </div>
               </div>
             </div>
           ))}
