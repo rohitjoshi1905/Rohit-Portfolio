@@ -1,0 +1,219 @@
+.experience {
+  padding: 6rem 2rem;
+  background-color: var(--bg-primary);
+}
+
+.experience-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.timeline {
+  margin-top: 3rem;
+  position: relative;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  animation: fadeInUp 0.6s ease both;
+}
+
+.timeline-marker {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.timeline-dot {
+  width: 20px;
+  height: 20px;
+  background: var(--bg-gradient);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.2), 0 0 15px rgba(245, 158, 11, 0.4);
+  z-index: 1;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.2), 0 0 15px rgba(245, 158, 11, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(245, 158, 11, 0.3), 0 0 25px rgba(245, 158, 11, 0.6);
+  }
+}
+
+.timeline-line {
+  width: 2px;
+  flex: 1;
+  background: linear-gradient(to bottom, var(--primary-color), transparent);
+  margin-top: 0.5rem;
+}
+
+.timeline-content {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  border: 2px solid rgba(245, 158, 11, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline-content:hover {
+  transform: translateX(15px) scale(1.02);
+  box-shadow: var(--shadow-lg), var(--glow-yellow);
+  border-color: var(--primary-color);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.experience-header {
+  margin-bottom: 1.5rem;
+}
+
+.experience-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+body.dark-mode .experience-title {
+  color: #ffffff;
+}
+
+.experience-company {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 0.75rem;
+  text-shadow: 0 0 10px rgba(245, 158, 11, 0.3);
+}
+
+.experience-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+body.dark-mode .experience-meta {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.experience-location,
+.experience-period {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.meta-svg-icon {
+  width: 16px;
+  height: 16px;
+  color: var(--primary-color);
+  flex-shrink: 0;
+}
+
+.experience-type {
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.experience-type.full-time {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(251, 191, 36, 0.15));
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.experience-type.internship {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(217, 119, 6, 0.1));
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+}
+
+.experience-achievements {
+  list-style: none;
+  padding: 0;
+}
+
+.achievement-item {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+body.dark-mode .achievement-item {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.achievement-item::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .experience {
+    padding: 2.5rem 0.9rem;
+  }
+
+  .experience-container {
+    padding: 0 0.25rem;
+  }
+
+  .timeline-item {
+    gap: 0.75rem;
+  }
+
+  .timeline-marker {
+    margin-top: 0.5rem;
+  }
+
+  .timeline-dot {
+    width: 16px;
+    height: 16px;
+  }
+
+  .timeline-content {
+    padding: 1.2rem;
+  }
+
+  .timeline-content:hover {
+    transform: translateX(5px);
+  }
+
+  .experience-title {
+    font-size: 1.25rem;
+  }
+
+  .experience-company {
+    font-size: 1rem;
+  }
+
+  .experience-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .achievement-item {
+    font-size: 0.95rem;
+  }
+}
