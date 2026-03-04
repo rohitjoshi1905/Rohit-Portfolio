@@ -52,7 +52,7 @@ const Projects = () => {
         'Deployed on AWS EC2 with Vercel frontend'
       ],
       category: 'Full Stack',
-      link: 'https://triloka.world'
+      link: 'https://triloka-six.vercel.app/'
     }
   ];
 
